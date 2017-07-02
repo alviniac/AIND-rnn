@@ -44,7 +44,7 @@ def clean_text(text):
     print(list(set(text))
 
     # remove as many non-english characters and character sequences as you can 
-    char_list = ['*','\xa0','¨','ã','©','@','â','à','è','é']
+    char_list = ['*','\xa0','¨','ã','©','@','â','à','è','é',*[str(x) for x in range(10)],'%','$','-',')','(','/']
     for char in char_list:
         text = text.replace(char, '')
     return text
